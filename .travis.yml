@@ -10,3 +10,14 @@ install:
 
 script:
   - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist/
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  name: linosau
+  email: jeremy_liu62@163.com
+  on: 
+    branch: master
